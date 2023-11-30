@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "inquirer": "^9.2.12"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
