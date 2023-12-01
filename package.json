@@ -1,13 +1,25 @@
 {
-  "dependencies": {
-    "inquirer": "^9.2.12"
+  "name": "svg-logo-maker",
+  "version": "1.0.0",
+  "description": "This is a logo maker that produces svg files",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
   },
   "scripts": {
     "test": "jest"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^24.9.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExecutorKarthan/SVG-Logo-Maker.git"
+  },
+  "author": "Alex Messina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExecutorKarthan/SVG-Logo-Maker/issues"
+  },
+  "homepage": "https://github.com/ExecutorKarthan/SVG-Logo-Maker#readme",
+  "dependencies": {
+    "inquirer": "^8.2.6"
   }
 }
