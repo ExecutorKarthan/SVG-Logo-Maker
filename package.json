@@ -6,20 +6,23 @@
   "directories": {
     "lib": "lib"
   },
-  "scripts": {
-    "test": "jest"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ExecutorKarthan/SVG-Logo-Maker.git"
   },
-  "author": "Alex Messina",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ExecutorKarthan/SVG-Logo-Maker/issues"
   },
   "homepage": "https://github.com/ExecutorKarthan/SVG-Logo-Maker#readme",
   "dependencies": {
     "inquirer": "^8.2.6"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Alex Messina",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
   }
 }
