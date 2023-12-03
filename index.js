@@ -1,4 +1,4 @@
-
+//Import libraries for later use
 const BaseShape = require('./lib/baseShape.js');
 const Rectangle = require('./lib/rectangle.js');
 const Circle = require('./lib/circle.js');
@@ -21,25 +21,30 @@ const questions = [
     "What color would you like to use for your shape? You can use lowercase english letters or by entering # hexadecimal numbers.", 
 ];
 
+//Create a function to prompt the user and then build a logo based on user responses
 function init(){
     inquirer
     .prompt([
+        //Prompt the user for 3 or less letters
         {
             type: "input",
             name: "logoLetters",
             message: questions[0]
         },
+        //Prompt the user for what color the their text needs to be
         {
             type: "input",
             name: "textColor",
             message: questions[1]
         },
+        //Prompt the user to determine the shape of the logo
         {
             type: "list",
             name: "shape",
             message: questions[2],
             choices: ["Circle", "Triangle", "Rectangle"]
         },
+        //Prompt the user to determine the color of the shape
         {
             type: "input",
             name: "shapeColor",
@@ -47,6 +52,7 @@ function init(){
         }
     ]).then((data) =>{
         var shape = "";
+        // Once the user data is collected, determine which function to call depending on the shape requested and make the appropriate shape object
         if(data.shape == "Rectangle"){
             shape = new Rectangle(data.logoLetters.toUpperCase(), data.textColor, data.shapeColor)
         }
@@ -57,12 +63,18 @@ function init(){
             shape = new Triangle(data.logoLetters.toUpperCase(), data.textColor, data.shapeColor)
         }
         
+        //Define the specifications that will define the shape's properties
         shape.createShape();
+
+        //Render the shape - meaning generate the code that will create the shape in a browser
         const html = shape.render();
+
+        //Create a svg file to store the newly created shape
         fs.writeFile('./Examples/logo.svg', html, (err)=>
         err ? console.log(err) : console.log("Generated logo.svg")
         )
     })
 }
 
+//Start the program to collect user data and make the svg file of said created shape.
 init();
