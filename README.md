@@ -11,7 +11,7 @@ This project requires node and inquirer to function properly. Node can be locate
 ## Usage
 Once installed, the user needs to navigate to the folder with the '''index.js''' file in their code editor or terminal. Once there, the user needs to run '''node index.js''' in the terminal to begin the prompt section. The user needs to enter no more than three letters for the logo, select a color for the text, choose a shape, and select a color for the shape. The colors may be written in English or hexcodes can be used. At the end of the prompt section, the program will format the responses and then create the logo from said responses. The newly created logo can be found in the "Examples" folder.
 
-A video walkthrough of the proper commands and their output can be found ![here]("/Examples/SVG-Logo-Maker.mp4").
+A video walkthrough of the proper commands and their output can be found ![here](/Examples/SVG-Logo-Maker.mp4).
 
 ## License
 This product is protected by a [MIT License](http://choosealicense.com/licenses/mit).
